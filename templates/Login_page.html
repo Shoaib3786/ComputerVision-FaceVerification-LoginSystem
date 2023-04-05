@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+      <h1>Login</h1>
+      <br>
+
+        <form action="" method="post">
+
+            <input type="text" placeholder="Email" name="email" value="{{
+                request.form.email }}">
+
+            <br>
+            <br>
+            <input type="password" placeholder="Password" name="password" value="{{
+                request.form.password }}">
+
+            <br>
+            <br>
+            <input type="submit" value="Forget Password" name="forget_action"/>
+
+            <input type="submit" value="Login" name="login_action"/>
+
+            <br>
+            <br>
+            <p style="color:red"> {{error}} </p>
+
+        </form>
+    </div>
+</body>
+</html>
+
+

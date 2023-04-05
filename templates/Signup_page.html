@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Signup</h1>
+      <br>
+      <form action="" method="post">
+
+          <input type="text" placeholder="Email" name="email" value="{{
+          request.form.email }}">
+
+          <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+
+<!--          <input type="submit" value="Capture" name="click"/>-->
+
+          <input type="submit" value="Capture Image & SignUp" name="Signup_action"/>
+
+
+
+      </form>
+
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+
+        <div class="container">
+
+
+
+            <div class="row">
+                <div class="col-lg-8  offset-lg-2">
+                    <h3 class="mt-5"> Click an Image </h3>
+                    <img src="{{ url_for('video_feed') }}"
+                         width="50%"
+                         border="5px solid #100">
+
+                    {% for message in get_flashed_messages() %}
+                        <h1><p style="color:red">{{ message }}</p></h1>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+  </body>
+</html>

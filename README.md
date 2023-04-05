@@ -1,4 +1,4 @@
-# Real-Time Face Verification Login system for website
+# Real-Time Face Verification Login system
 
 
 
